@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "4d1ab431-81e5-4227-be9a-c6749ab81935",
+		"name": "weather practice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38189343"
+	},
+	"item": [
+		{
+			"name": "유저 컨트롤러",
+			"item": [
+				{
+					"name": "유저 등록",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test\",\r\n    \"email\": \"test@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "유저 등록",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test\",\r\n    \"email\": \"test@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:11:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"test\",\n    \"email\": \"test\"\n}"
+						}
+					]
+				},
+				{
+					"name": "유저 찾기",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "유저 찾기",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:12:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"test\",\n    \"email\": \"test\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "날씨 컨트롤러",
+			"item": [
+				{
+					"name": "모든 도시 날씨 조회",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/weather",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"weather"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "모든 도시 날씨 조회",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/weather",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"weather"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:13:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"district\": \"종로구\",\n        \"maxIndex\": 66,\n        \"airQualityGrade\": \"보통\",\n        \"pollutant\": \"PM-2.5\",\n        \"nitrogen\": 0.011,\n        \"ozone\": 0.043,\n        \"carbon\": 0.4,\n        \"sulfurous\": 0.002,\n        \"pm10\": 32,\n        \"pm25\": 20\n    },\n    {\n        \"district\": \"중구\",\n        \"maxIndex\": 61,\n        \"airQualityGrade\": \"보통\",\n        \"pollutant\": \"O3\",\n        \"nitrogen\": 0.008,\n        \"ozone\": 0.044,\n        \"carbon\": 0.3,\n        \"sulfurous\": 0.003,\n        \"pm10\": 29,\n        \"pm25\": 22\n    },\n    {\n        \"district\": \"용산구\",\n        \"maxIndex\": 56,\n        \"airQualityGrade\": \"보통\",\n        \"pollutant\": \"O3\",\n        \"nitrogen\": 0.011,\n        \"ozone\": 0.037,\n        \"carbon\": 0.4,\n        \"sulfurous\": 0.003,\n        \"pm10\": 32,\n        \"pm25\": 19\n    },\n    {\n        \"district\": \"성동구\",\n        \"maxIndex\": 60,\n        \"airQualityGrade\": \"보통\",\n        \"pollutant\": \"O3\",\n        \"nitrogen\": 0.011,\n        \"ozone\": 0.042,\n        \"carbon\": 0.4,\n        \"sulfurous\": 0.003,\n        \"pm10\": 27,\n        \"pm25\": 17\n    },\n    {\n        \"district\": \"광진구\",\n        \"maxIndex\": 69,\n        \"airQualityGrade\": \"보통\",\n        \"pollutant\": \"O3\",\n        \"nitrogen\": 0.008,\n        \"ozone\": 0.053,\n        \"carbon\": 0.4,\n        \"sulfurous\": 0.003,\n        \"pm10\": 30,\n        \"pm25\": 16\n    },\n    {\n        \"district\": \"동대문구\",\n        \"maxIndex\": 62,\n        \"airQualityGrade\": \"보통\",\n        \"pollutant\": \"O3\",\n        \"nitrogen\": 0.008,\n        \"ozone\": 0.044,\n        \"carbon\": 0.3,\n        \"sulfurous\": 0.002,\n        \"pm10\": 28,\n        \"pm25\": 16\n    },\n    {\n        \"district\": \"중랑구\",\n        \"maxIndex\": 61,\n        \"airQualityGrade\": \"보통\",\n        \"pollutant\": \"PM-2.5\",\n        \"nitrogen\": 0.009,\n        \"ozone\": 0.038,\n        \"carbon\": 0.4,\n        \"sulfurous\": 0.003,\n        \"pm10\": 34,\n        \"pm25\": 22\n    },\n    {\n        \"district\": \"성북구\",\n        \"maxIndex\": 63,\n        \"airQualityGrade\": \"보통\",\n        \"pollutant\": \"O3\",\n        \"nitrogen\": 0.007,\n        \"ozone\": 0.045,\n        \"carbon\": 0.3,\n        \"sulfurous\": 0.003,\n        \"pm10\": 27,\n        \"pm25\": 12\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "특정 도시 날씨 조회",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/weather/111274",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"weather",
+								"111274"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "특정 도시 날씨 조회",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/weather/111274",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"weather",
+										"111274"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Feb 2025 07:14:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"district\": \"강동구\",\n    \"maxIndex\": 66,\n    \"airQualityGrade\": \"보통\",\n    \"pollutant\": \"O3\",\n    \"nitrogen\": 0.008,\n    \"ozone\": 0.049,\n    \"carbon\": 0.5,\n    \"sulfurous\": 0.004,\n    \"pm10\": 35,\n    \"pm25\": 20\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
